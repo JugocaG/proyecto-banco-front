@@ -1,3 +1,4 @@
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
 
@@ -11,11 +12,12 @@ export class ClientesComponent {
   message: String;
 
   constructor(
-    private service: AuthService
+    private service: AuthService, private http: HttpClient
   ) { }
 
   ngOnInit() {
     this.verCliente();
+
   }
 
   verCliente() {
@@ -23,6 +25,8 @@ export class ClientesComponent {
       console.log(response);
       this.message = response.message;
     })
+
   }
+
 
 }

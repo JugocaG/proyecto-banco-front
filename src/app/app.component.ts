@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+
+  // ngOnInit(): void {
+  //   window.location.href = "/login"
+  // }
   title = 'front-banco';
 }

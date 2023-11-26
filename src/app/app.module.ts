@@ -29,7 +29,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

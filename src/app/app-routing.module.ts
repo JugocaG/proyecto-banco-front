@@ -9,6 +9,7 @@ import { TransaccionesComponent } from './components/transacciones/transacciones
 import { InicioComponent } from './components/inicio/inicio.component';
 
 const routes: Routes = [
+    
   {path: '', redirectTo: '/inicio', pathMatch:'full'},
   {path: 'inicio', component:InicioComponent},
   {path: 'login', component:LoginComponent},

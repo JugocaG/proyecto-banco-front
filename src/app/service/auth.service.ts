@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of} from 'rxjs';
 
 const BASE_URL = ['http://localhost:8080/']
 
@@ -8,6 +8,7 @@ const BASE_URL = ['http://localhost:8080/']
   providedIn: 'root'
 })
 export class AuthService {
+
 
   constructor(
     private http: HttpClient
@@ -22,10 +23,17 @@ export class AuthService {
     return this.http.post(BASE_URL + "authenticate", loginRequest)
   }
 
+  logout(): Observable<any> {
+    localStorage.removeItem('JWT');
+    return of(null);
+  }
+
+
   verCLiente(): Observable<any> {
     return this.http.get(BASE_URL + 'api/cliente/ver', {
       headers: this.createAuthorizationHeader()
     });
+    
   }
 
   private createAuthorizationHeader() {
