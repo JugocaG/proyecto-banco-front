@@ -41,7 +41,7 @@ export class SignupComponent {
     console.log(this.signupForm.value);
     this.service.signup(this.signupForm.value).subscribe((response) => {
       console.log(response);
-      this.router.navigateByUrl('/dashboard');
+      this.router.navigateByUrl('/login');
     })
   }
 

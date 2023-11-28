@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h2 class="mb-3">Ver Transacciones</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID Transaccion</th>
+        <th>Tipo Transaccion</th>
+        <th>Cuenta de Origen</th>
+        <th>Cuenta Destino</th>
+        <th>Valor</th>
+        <th>Fecha</th>
+        <!-- Agrega más columnas según tus datos -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos">
+        <td>{{ dato.idTransaccion }}</td>
+        <td>{{ dato.tipoTransaccion }}</td>
+        <td>{{ dato.cuentaOrigen }}</td>
+        <td>{{ dato.cuentaDestino }}</td>
+        <td>{{ dato.valor }}</td>
+        <td>{{ dato.fecha }}</td>
+        <!-- Ajusta las propiedades según la estructura de tus datos -->
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -30,11 +30,14 @@ export class LoginComponent {
     this.service.login(this.loginForm.value).subscribe((response) => {
       console.log(response);
       if (response.jwtToken) {
-        alert(response.jwtToken);
         const jwtToken = response.jwtToken;
         localStorage.setItem('JWT', jwtToken);
         this.router.navigateByUrl('/dashboard');
       }
+    },
+    (error) => {
+      
+      alert("Credenciales invalidas")
     })
   }
 

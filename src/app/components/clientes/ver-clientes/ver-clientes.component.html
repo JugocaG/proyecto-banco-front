@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <h2 class="mb-3">Ver Clientes</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Número de Cuentas de Ahorro</th>
+        <th>Número de Cuentas Corriente</th>
+        <th>Número de Tarjetas de Crédito</th>
+        <!-- Agrega más columnas según tus datos -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos">
+        <td>{{ dato.id }}</td>
+        <td>{{ dato.nombre }}</td>
+        <td>{{ dato.numeroCuentasAhorro }}</td>
+        <td>{{ dato.numeroCuentasCorriente }}</td>
+        <td>{{ dato.numeroTarjetasCredito }}</td>
+        <!-- Ajusta las propiedades según la estructura de tus datos -->
+      </tr>
+    </tbody>
+  </table>
+</div>

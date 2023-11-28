@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <h2 class="mb-3">Ver Cuentas</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID Propietario</th>
+        <th>Nivel</th>
+        <th>Número de Cuenta</th>
+        <th>Saldo</th>
+        <th>Tipo de cuenta</th>
+        <!-- Agrega más columnas según tus datos -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos">
+        <td>{{ dato.idPropietario }}</td>
+        <td>{{ dato.nivel }}</td>
+        <td>{{ dato.numeroCuenta }}</td>
+        <td>{{ dato.saldo }}</td>
+        <td>{{ dato.tipoCuenta }}</td>
+        <!-- Ajusta las propiedades según la estructura de tus datos -->
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,14 +1,20 @@
-<div class="screen-init">
-  <h1>Pagina Principal</h1>
-  <button class="btn btn-danger" type="button" routerLink="/cliente">
-    Clientes
-  </button>
-  <button class="btn btn-danger" type="button" routerLink="/cuenta">
-    Cuentas
-  </button>
-  <button class="btn btn-danger" type="button" routerLink="/transaccion">
-    Transaccion
-  </button>
+<div class="container text-center mt-5">
+  <div class="screen-init">
+    <h1>Pagina Principal</h1>
+    <button class="btn btn-primary mx-2" type="button" routerLink="/cliente">
+      Clientes
+    </button>
+    <button class="btn btn-primary mx-2" type="button" routerLink="/cuenta">
+      Cuentas
+    </button>
+    <button
+      class="btn btn-primary mx-2"
+      type="button"
+      routerLink="/transaccion"
+    >
+      Transacción
+    </button>
+  </div>
+  <button class="btn btn-danger mt-3" (click)="logout()">Cerrar Sesión</button>
 </div>
-<button (click)="logout()">Cerrar Sesión</button>
 <router-outlet></router-outlet>

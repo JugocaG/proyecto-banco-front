@@ -1,6 +1,7 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
+import { ClienteServiceService } from 'src/app/service/cliente/cliente-service.service';
 
 @Component({
   selector: 'app-clientes',
@@ -9,24 +10,24 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class ClientesComponent {
 
-  message: String;
+  datos: any[];
 
   constructor(
-    private service: AuthService, private http: HttpClient
+    private serviceCliente: ClienteServiceService, private http: HttpClient, private service: AuthService
   ) { }
 
   ngOnInit() {
-    this.verCliente();
 
+    this.service.verificarToken()
   }
 
-  verCliente() {
-    this.service.verCLiente().subscribe((response) => {
-      console.log(response);
-      this.message = response.message;
-    })
 
+
+  logOut(){
+    this.service.logout()
   }
 
+
+  
 
 }

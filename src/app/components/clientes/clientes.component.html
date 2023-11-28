@@ -1,1 +1,28 @@
-<h1>{{ message }}</h1>
+<div class="container text-center mt-5">
+  <div class="screen-init">
+    <h1>Clientes</h1>
+    <button
+      class="btn btn-primary mx-2"
+      type="button"
+      routerLink="/cliente/ver-clientes"
+    >
+      Ver Clientes
+    </button>
+    <button
+      class="btn btn-primary mx-2"
+      type="button"
+      routerLink="/cliente/crear-cliente"
+    >
+      Crear Cliente
+    </button>
+    <button
+      class="btn btn-primary mx-2"
+      type="button"
+      routerLink="/cliente/eliminar-cliente"
+    >
+      Eliminar Cliente
+    </button>
+  </div>
+  <button class="btn btn-danger mt-3" (click)="logOut()">Cerrar Sesión</button>
+</div>
+<router-outlet></router-outlet>

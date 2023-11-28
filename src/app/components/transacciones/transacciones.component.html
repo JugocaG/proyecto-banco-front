@@ -1,1 +1,28 @@
-<p>transacciones works!</p>
+<div class="container text-center mt-5">
+  <div class="screen-init">
+    <h1>Transacciones</h1>
+    <button
+      class="btn btn-primary mx-2"
+      type="button"
+      routerLink="/transaccion/ver-transacciones"
+    >
+      Ver Transacciones
+    </button>
+    <button
+      class="btn btn-primary mx-2"
+      type="button"
+      routerLink="/transaccion/realizar-transaccion"
+    >
+      Realizar Transaccion
+    </button>
+    <button
+      class="btn btn-primary mx-2"
+      type="button"
+      routerLink="/transaccion/deposito"
+    >
+      Deposito
+    </button>
+  </div>
+  <button class="btn btn-danger mt-3" (click)="logOut()">Cerrar Sesión</button>
+</div>
+<router-outlet></router-outlet>
